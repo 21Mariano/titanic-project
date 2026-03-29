@@ -133,13 +133,28 @@ dmypy.json
 .DS_Store
 Thumbs.db
 
-# Models (generated artifacts) - exclude trained models
-# Keep: voting_clf_*.joblib, rf_clf_*.joblib (best models)
+# Models directory (trained model artifacts not versioned)
+models/
+
+# Data files - exclude content but keep directory structure
+data/raw/*
+data/interim/*
+data/processed/*
+
+# Keep data subdirectories (but not their contents)
+!data/raw/.gitkeep
+!data/interim/.gitkeep
+!data/processed/.gitkeep
+
+# Additional model formats
 *.pkl
 *.pickle
+*.h5
+*.pth
 
-# Data files (large datasets, keep raw data versioned)
+# Large data files
 *.parquet
+*.csv
 
 # Jupyter temp files
 .ipynb_checkpoints/
