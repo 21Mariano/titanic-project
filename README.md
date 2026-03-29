@@ -47,7 +47,7 @@ titanic-project/
 
 Before running the training script, you need to obtain the Titanic dataset from Kaggle:
 
-1. Download the dataset from [Kaggle Titanic Dataset](https://www.kaggle.com/datasets/yasserh/titanic-dataset)
+1. Download the dataset from [Kaggle Titanic Competition](https://www.kaggle.com/competitions/titanic)
 2. Place the downloaded file in `data/raw/` with the name `titanic-dataset.csv`
 
 ```bash
