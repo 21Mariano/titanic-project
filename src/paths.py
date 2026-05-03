@@ -1,7 +1,7 @@
 import os
 
 # Root project directory
-PROJECT_ROOT = os.path.abspath(os.getcwd())
+PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # Data paths
 DATA_RAW_PATH = os.path.join(PROJECT_ROOT, 'data', 'raw', 'titanic-dataset.csv')

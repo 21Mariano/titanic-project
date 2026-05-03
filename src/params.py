@@ -10,19 +10,19 @@ dt_params = {
 }
 
 svc_params = {
-  'C': 1, 
-  'break_ties': True, 
-  'class_weight': None, 
-  'decision_function_shape': 'ovr', 
-  'degree': 2, 
-  'gamma': 'auto', 
-  'kernel': 'rbf', 
-  'max_iter': 200, 
+  'C': 1,
+  'class_weight': None,
+  'decision_function_shape': 'ovr',
+  'degree': 2,
+  'gamma': 'auto',
+  'kernel': 'rbf',
+  'max_iter': 1000,
   'shrinking': True
 }
 
 lr_params = {
   'C': 0.01, 
+  'intercept_scaling': 1.0, 
   'max_iter': 100, 
   'penalty': 'l2', 
   'solver': 'liblinear', 
@@ -30,7 +30,5 @@ lr_params = {
 }
 
 vc_params = {
-  'flatten_transform': True, 
-  'voting': 'hard', 
-  'weights': None
+  'voting': 'hard'
 }

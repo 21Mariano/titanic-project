@@ -52,5 +52,6 @@ class EvaluateModel:
       print("Model evaluation failed due to loading issues.")
       return None
     
-evaluation = EvaluateModel()
-evaluation.evaluate()
+if __name__ == "__main__":
+  evaluation = EvaluateModel()
+  evaluation.evaluate()

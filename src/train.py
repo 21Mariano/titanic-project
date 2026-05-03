@@ -1,15 +1,24 @@
 import sys, os
+import warnings
+warnings.filterwarnings('ignore')
+
 sys.path.append(os.path.abspath('..'))
 sys.path.append(os.path.abspath('.'))
 
 import pandas as pd
+from src.paths import DATA_INTERIM_PATH
+from src.data_cleaning import run_data_cleaning
 from src.preprocess import PreprocessData
-from src.paths import DATA_INTERIM_PATH, MODELS_PATH
+from src.paths import MODELS_PATH
 from src.models import model
 from src.data_loader import get_split_data
 from src.evaluate import EvaluateModel
 from sklearn.pipeline import Pipeline
 import joblib
+
+if not os.path.exists(DATA_INTERIM_PATH):
+  print("Running data cleaning...")
+  run_data_cleaning()
 
 dataset = pd.read_csv(DATA_INTERIM_PATH)
 X_train, X_test, y_train, y_test = get_split_data(dataset, save=True)

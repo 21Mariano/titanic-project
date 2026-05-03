@@ -81,11 +81,12 @@ This script will:
 - **Modular Architecture**: Separated concerns with dedicated modules for data loading, preprocessing, training, and evaluation
 - **Data Preprocessing Pipeline**: Automated feature engineering with median imputation and robust scaling
 - **Stratified Sampling**: Balanced train-test split to preserve class distribution
-- **Ensemble Model**: Voting classifier combining multiple algorithms
+- **Ensemble Model**: Voting Classifier (hard voting) combining DecisionTreeClassifier, SVC, and LogisticRegression
 - **Jupyter Notebooks**: Interactive exploration and model experimentation
 
 ## Project Modules
 
+- **`src/data_cleaning.py`**: Data cleaning and preprocessing of raw data
 - **`src/data_loader.py`**: Handles data loading and stratified train-test splitting
 - **`src/preprocess.py`**: Data preprocessing pipeline with imputation and scaling
 - **`src/models.py`**: Model definitions and configurations
